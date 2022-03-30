@@ -397,38 +397,67 @@ header {
   opacity: 0.1;
 }
 
-.left .cta .btn {
-  display: inline-block;
-  padding: 0.9rem 1.9rem;
-  color: #fff !important;
-  background-color: var(--mainColor);
-  border-radius: 16px;
-  text-transform: capitalize;
+.btn{
+  border: 1px solid #3498db;
+  background: none;
+  padding: 10px 20px;
+  font-size: 20px;
+  font-family: "Poppins", sans-serif;
   cursor: pointer;
+  margin: 10px;
+  border-radius: 5px;
+  transition: 0.8s;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn1 {
+  color: #3498db;
+}
+
+.btn2 {
+  color: #fff;
+}
+
+.btn1:hover {
+  color: #fff;
+}
+
+.btn2:hover {
+  color: #3498db;
+}
+
+.btn::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 120%;
+  height: 0%;
+  background: #3498db;
+  z-index: -1;
   transition: 0.8s;
 }
 
-.left .cta .btn:hover {
-  background-color: #f1f8fc !important;
-  color: var(--mainColor) !important;
-  transform: scale(1) !important;
+.btn2::before {
+  top: 0;
+  border-radius: 0 0 50% 50%;
 }
 
-.left .cta .btn1 {
-  display: inline-block;
-  padding: 0.8rem 1.2rem;
-  color: #fff !important;
-  background-color: var(--mainColor);
-  border-radius: 500px;
-  text-transform: capitalize;
-  cursor: pointer;
-  transition: 0.8s;
+.btn1::before {
+  bottom: 0;
+  border-radius: 50% 50% 0 0;
 }
 
-.left .cta .btn1:hover {
-  background-color: #f1f8fc !important;
-  color: var(--mainColor)!important;
-  transform: scale(1) !important;
+.btn2::before {
+  height: 180%;
+}
+
+.btn1:hover::before {
+  height: 180%;
+}
+
+.btn2:hover::before {
+  height: 0%;
 }
 
 /* Card  */
