@@ -81,8 +81,8 @@ header {
   align-items: center;
   justify-content: space-between;
   margin: 2.5rem auto 0;
-  background-image: linear-gradient(to right, #4C98FB, #9bc7ff);
-  /* background: var(--primary-theme-color); */
+  /* background-image: linear-gradient(to right, #4C98FB, #9bc7ff); */
+  background: var(--primary-theme-color);
   width: 80vw;
   height: 4.3rem;
   border-radius: 2rem;
