@@ -1263,10 +1263,7 @@ footer.footer .move-up {
 
 footer.footer .move-up span {
     color: #a6a6a6;
-    background-color: #007bff;
-    border-radius: 50%;
     cursor: pointer;
-    padding: 18px 20px;
     transition: 0.5s;
 }
 
