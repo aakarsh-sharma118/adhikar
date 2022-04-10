@@ -45,7 +45,7 @@ $(document).ready(function () {
     })
 
     // AOS Instance
-    
+
     AOS.init();
 
 });
@@ -97,12 +97,11 @@ tl.fromTo(".card", { opacity: 0 }, { opacity: 1, duration: 1 }, "-=1");
 
 // For colour Change In Intro
 
-var i=0;
-function divchange()
-{
-    var divtag=document.getElementById("intro");
-    var bgcolor= ["#4c98fb"];
-    divtag.style.backgroundColor=bgcolor[i];
-    i=(i+1)%bgcolor.length;
+var i = 0;
+function divchange() {
+    var divtag = document.getElementById("intro");
+    var bgcolor = ["#0080FF"];
+    divtag.style.backgroundColor = bgcolor[i];
+    i = (i + 1) % bgcolor.length;
 }
-setInterval(divchange,2500);
+setInterval(divchange, 2500);
