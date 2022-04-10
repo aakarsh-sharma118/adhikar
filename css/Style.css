@@ -1287,19 +1287,19 @@ footer.footer .move-up span:before {
     border-radius: 50%;
     opacity: 0.08;
     animation: scale 1.2s ease-out infinite 1s;
-  }
-  
-  @keyframes scale {
+}
+
+@keyframes scale {
     0% {
-      transform: translate(-50%, -50%) scale(1);
-      opacity: 0.15;
+        transform: translate(-50%, -50%) scale(1);
+        opacity: 0.15;
     }
-  
+
     100% {
-      transform: translate(-50%, -50%) scale(1.6);
-      opacity: 0;
+        transform: translate(-50%, -50%) scale(1.6);
+        opacity: 0;
     }
-  }
+}
 
 /* ---------x------- Footer ----------x---------- */
 
@@ -1318,8 +1318,40 @@ footer.footer .move-up span:before {
     align-items: center;
 }
 
+.intro2 {
+    background: transparent;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: appear;
+    animation-duration: 1.5s;
+    animation-delay: 1.5s;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: var(--main-color);
+}
+
+@keyframes appear {
+    0% {
+        clip-path: circle(0% at 50% 50%);
+        background-color: #4c98fb;
+    }
+
+    100% {
+        clip-path: circle(200% at 0 0);
+        background-color: #4c98fb;
+    }
+}
+
 .slider {
-    background: #eee;
+    background: var(--main-color);
+    color: var(--main-color);
     position: fixed;
     z-index: 20;
     top: 0;
@@ -1331,20 +1363,24 @@ footer.footer .move-up span:before {
 
 .intro-text {
     z-index: 20;
-    color: #333;
+    color: #efefef;
     font-family: "Heebo", sans-serif;
     font-size: 3rem;
 }
 
 .hide {
     text-align: center;
-    background: #eff4ff;
+    background: transparent;
     overflow: hidden;
 }
 
 .hide span {
     transform: translateY(100%);
     display: inline-block;
+    border-radius: 500px;
+    color: #efefef;
+    background-color: var(--main-color);
+    padding: 20px 17px;
 }
 
 /* ---------x------- Intro ----------x---------- */
