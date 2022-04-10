@@ -1330,7 +1330,7 @@ footer.footer .move-up span:before {
     justify-content: center;
     align-items: center;
     animation: appear;
-    animation-duration: 1.5s;
+    animation-duration: 3.5s;
     animation-delay: 1.5s;
     animation-iteration-count: 1;
     animation-timing-function: ease-in-out;
@@ -1339,12 +1339,12 @@ footer.footer .move-up span:before {
 
 @keyframes appear {
     0% {
-        clip-path: circle(0% at 50% 50%);
+        clip-path: circle(4% at 50% 48%);
         background-color: #0080FF;
     }
 
     100% {
-        clip-path: circle(200% at 0 0);
+        clip-path: circle(1500% at 0 0);
         background-color: #0080FF;
     }
 }
