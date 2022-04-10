@@ -1374,10 +1374,10 @@ footer.footer .move-up span:before {
     overflow: hidden;
     animation: img;
     animation-duration: 2.5s;
-    animation-delay: 0.2s;
+    animation-delay: 0s;
+    animation-timing-function: ease-in-out;
     /* animation-fill-mode: forwards; */
     /* animation-iteration-count: 1; */
-    /* animation-timing-function: ease-in-out; */
 }
 
 @keyframes img {
