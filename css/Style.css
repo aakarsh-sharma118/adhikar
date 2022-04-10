@@ -1323,7 +1323,7 @@ footer.footer .move-up span:before {
     position: fixed;
     top: 0;
     left: 0;
-    z-index: 999;
+    z-index: -20;
     width: 100%;
     height: 100%;
     display: flex;
@@ -1340,12 +1340,12 @@ footer.footer .move-up span:before {
 @keyframes appear {
     0% {
         clip-path: circle(0% at 50% 50%);
-        background-color: #4c98fb;
+        background-color: #0080FF;
     }
 
     100% {
         clip-path: circle(200% at 0 0);
-        background-color: #4c98fb;
+        background-color: #0080FF;
     }
 }
 
@@ -1372,6 +1372,23 @@ footer.footer .move-up span:before {
     text-align: center;
     background: transparent;
     overflow: hidden;
+    animation: img;
+    animation-duration: 2.5s;
+    animation-delay: 0.2s;
+    /* animation-fill-mode: forwards; */
+    /* animation-iteration-count: 1; */
+    /* animation-timing-function: ease-in-out; */
+}
+
+@keyframes img {
+
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
 }
 
 .hide span {
@@ -1379,8 +1396,8 @@ footer.footer .move-up span:before {
     display: inline-block;
     border-radius: 500px;
     color: #efefef;
-    background-color: var(--main-color);
     padding: 20px 17px;
+    /* background-color: var(--main-color); */
 }
 
 /* ---------x------- Intro ----------x---------- */
