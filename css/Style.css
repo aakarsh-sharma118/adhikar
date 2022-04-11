@@ -1460,7 +1460,7 @@ footer.footer .move-up span:before {
 
     @keyframes appear2 {
         0% {
-            clip-path: circle(8% at 50% 48%);
+            clip-path: circle(8% at 50% 47%);
             background-color: #0080FF;
         }
 
