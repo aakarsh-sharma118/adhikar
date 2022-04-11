@@ -1330,8 +1330,8 @@ footer.footer .move-up span:before {
     justify-content: center;
     align-items: center;
     animation: appear;
-    animation-duration: 3.5s;
-    animation-delay: 1.5s;
+    animation-duration: 4s;
+    animation-delay: 2s;
     animation-iteration-count: 1;
     animation-timing-function: ease-in-out;
     animation-fill-mode: var(--main-color);
@@ -1437,6 +1437,37 @@ footer.footer .move-up span:before {
     main .site-title .logo {
         width: 150px;
         height: 200px;
+    }
+
+    .intro2 {
+        background: transparent;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: -20;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        animation: appear2;
+        animation-duration: 4s;
+        animation-delay: 2s;
+        animation-iteration-count: 1;
+        animation-timing-function: ease-in-out;
+        animation-fill-mode: var(--main-color);
+    }
+
+    @keyframes appear2 {
+        0% {
+            clip-path: circle(8% at 50% 48%);
+            background-color: #0080FF;
+        }
+
+        100% {
+            clip-path: circle(1500% at 0 0);
+            background-color: #0080FF;
+        }
     }
 
 }
