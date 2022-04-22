@@ -447,7 +447,7 @@ header {
 .big-title h1 {
     /* color: var(--bg-color2); */
     color: var(--darkOne);
-    font-family: var(--Anton);
+    font-family: var(--Lexend);
     text-transform: capitalize;
     line-height: 1.4;
 }
