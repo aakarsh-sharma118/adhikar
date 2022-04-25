@@ -23,6 +23,18 @@
 
 <body>
 
+  <!-- Preloader -->
+
+  <div class="intro">
+    <div class="loader-container">
+      <div class="box"></div>
+      <div class="box"></div>
+    </div>
+  </div>
+
+
+  <!-- Preloader End -->
+
   <!-- Nav Bar -->
 
   <nav class="navbar">
@@ -131,10 +143,9 @@
 
         <div class="panel left-panel">
           <div class="content">
-            <h3>New here ?</h3>
+            <h3>Not Registered Yet ?</h3>
             <p>
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Debitis,
-              ex ratione. Aliquid!
+              Click on Register to join one of the most secure voting Platform.
             </p>
             <button class="btn transparent" id="sign-up-btn">
               Register
@@ -149,13 +160,12 @@
 
         <div class="panel right-panel">
           <div class="content">
-            <h3>One of us ?</h3>
+            <h3>Already Registered ?</h3>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum
-              laboriosam ad deleniti.
+              Click on Log In to start voting or see results of the last voting.
             </p>
             <button class="btn transparent" id="sign-in-btn">
-              Sign in
+              Log in
             </button>
           </div>
           <img src="./assets/Voting-pana-900x564.png" class="image" alt="" />
@@ -180,20 +190,6 @@
   <!-- Custom Javascript file -->
 
   <script src="js/signup.js"></script>
-
-
-  <script>
-    $(document).ready(function () {
-      $("#otp").click(function () {
-        $(this).fadeOut();
-      });
-    });
-    $(document).ready(function () {
-      $("#otp2").click(function () {
-        $(this).fadeOut();
-      });
-    });
-  </script>
 
 </body>
 
