@@ -201,10 +201,16 @@ input {
   /* background-image: linear-gradient(-45deg, #4481ebb3 0%, #978af6 100%); */
   /* background-image: radial-gradient(#ec5b5bb3 0%, #ed94f9 100%); */
   /* background-image: radial-gradient(#dcd8d8b3 0%, #aaaaaa 100%); */
-  background-image: url('../assets/beige-paper.png'),url('../assets/BG2.jpg');
-  background-color: #aaaaaa7b;
+  /* background-image: url('../assets/textures/3.png'),url('../assets/BG2.jpg'); */
+  /* background-color: #aaaaaa7b; */
+  /* background-attachment: fixed; */
+  /* background-size: cover; */
+  /* background-repeat: no-repeat; */
+  /* background-position: center; */
+  background-color: #ffffff;
+  background-image: url("../assets/textures/8.png");
   background-attachment: fixed;
-  background-size: cover;
+  background-repeat: repeat;
   background-position: center;
   position: relative;
   width: 100%;
