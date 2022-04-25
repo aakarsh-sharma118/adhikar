@@ -1255,6 +1255,29 @@ footer.footer .rights h4 a {
     color: var(--white);
 }
 
+.goTop {
+    position: fixed;
+    z-index: 999;
+    bottom: 40px;
+    right: 40px;
+    width: 40px;
+    height: 40px;
+    background-color: #4c98fb;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    color: #fff;
+    outline: none;
+    display: none;
+}
+
+.goTop:hover {
+    background: #ffffff;
+    color: #4c98fb;
+    transition: 0.5s;
+}
+
+/* 
 footer.footer .move-up {
     position: absolute;
     right: 6%;
@@ -1299,7 +1322,7 @@ footer.footer .move-up span:before {
         transform: translate(-50%, -50%) scale(1.6);
         opacity: 0;
     }
-}
+} */
 
 /* ---------x------- Footer ----------x---------- */
 
