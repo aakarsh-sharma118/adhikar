@@ -23,11 +23,6 @@ allSidebarSubmenu.forEach(item => {
 })
 
 
-
-
-
-
-
 // SIDEBAR: DROPDOWN MENU
 const allSidebarDropdownMenu = document.querySelectorAll('#sidebar .sidebar__dropdown-menu')
 
@@ -53,11 +48,6 @@ allSidebarDropdownMenu.forEach(item => {
 })
 
 
-
-
-
-
-
 // SIDEBAR MOBILE: TOGGLE SIDEBAR
 const toggleSidebar = document.querySelector('#sidebar-mobile .toggle-sidebar')
 const sidebar = document.querySelector('#sidebar')
@@ -65,11 +55,6 @@ const sidebar = document.querySelector('#sidebar')
 toggleSidebar.addEventListener('click', function () {
     sidebar.classList.add('active')
 })
-
-
-
-
-
 
 
 // MAIN: DROPDOWN
@@ -94,13 +79,8 @@ allMainDropdown.forEach(item => {
 })
 
 
-
-
-
-
-
 // MAIN: MAIN BODY MENU
-const allMainBodyMenu = document.querySelectorAll('#main .main__body :is(.members__menu, .sales-summary__menu) .menu')
+const allMainBodyMenu = document.querySelectorAll('#main .main__body :is(.voter__menu, .voting-summary__menu) .menu')
 
 allMainBodyMenu.forEach(item => {
     const icon = item.previousElementSibling
@@ -117,11 +97,6 @@ allMainBodyMenu.forEach(item => {
         }
     })
 })
-
-
-
-
-
 
 
 // DOCUMENT EVENT
@@ -143,17 +118,12 @@ document.addEventListener('click', function (e) {
         })
     }
 
-    if (!e.target.matches('#main .main__body :is(.members__menu, .sales-summary__menu), #main .main__body :is(.members__menu, .sales-summary__menu) *')) {
+    if (!e.target.matches('#main .main__body :is(.voter__menu, .voting-summary__menu), #main .main__body :is(.voter__menu, .voting-summary__menu) *')) {
         allMainBodyMenu.forEach(item => {
             item.classList.remove('active')
         })
     }
 })
-
-
-
-
-
 
 
 // CHART: APEXCHART
