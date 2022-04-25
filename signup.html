@@ -12,6 +12,9 @@
 
   <link rel="stylesheet" href="css/signup.css" />
   <script src="https://kit.fontawesome.com/64d58efce2.js" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+    integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
     integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -67,14 +70,17 @@
             </div>
 
 
-            <input type="submit" value="Send O.T.P" class="btn solid" />
 
             <div class="input-field">
               <i class="fas fa-lock"></i>
               <input type="password" placeholder="O.T.P" />
             </div>
 
-            <input type="submit" value="Login" class="btn solid" />
+
+            <div class="button">
+              <input type="submit" value="Send O.T.P" class="btn solid" id="otp" />
+              <input type="submit" value="Login" class="btn solid" />
+            </div>
 
           </form>
 
@@ -97,14 +103,16 @@
             </div>
 
 
-            <input type="submit" value="Send O.T.P" class="btn solid" />
 
             <div class="input-field">
               <i class="fas fa-lock"></i>
               <input type="password" placeholder="O.T.P" />
             </div>
 
-            <input type="submit" class="btn" value="Sign up" />
+            <div class="button">
+              <input type="submit" value="Send O.T.P" class="btn solid" id="otp2" />
+              <input type="submit" class="btn" value="Sign up" />
+            </div>
 
           </form>
 
@@ -172,6 +180,20 @@
   <!-- Custom Javascript file -->
 
   <script src="js/signup.js"></script>
+
+
+  <script>
+    $(document).ready(function () {
+      $("#otp").click(function () {
+        $(this).fadeOut();
+      });
+    });
+    $(document).ready(function () {
+      $("#otp2").click(function () {
+        $(this).fadeOut();
+      });
+    });
+  </script>
 
 </body>
 
