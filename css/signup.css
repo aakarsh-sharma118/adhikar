@@ -322,6 +322,10 @@ form.sign-in-form {
   background-color: #4d84e2;
 }
 
+.button {
+  flex-direction: row;
+}
+
 
 /* LogIn- SignUp End */
 
