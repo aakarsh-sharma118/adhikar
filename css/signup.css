@@ -29,7 +29,12 @@ html {
 
 body,
 input {
+  scroll-behavior: smooth;
+  user-zoom: none !important;
+  user-select: none !important;
+  -webkit-user-select: none !important;
   font-family: "Poppins", sans-serif;
+  -moz-user-select: none !important;
 }
 
 /* Base End  */

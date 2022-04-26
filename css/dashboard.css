@@ -64,6 +64,12 @@ i[class^="ph"] {
 body {
     overflow-x: hidden;
     background: var(--light);
+    scroll-behavior: smooth;
+    user-zoom: none !important;
+    user-select: none !important;
+    -webkit-user-select: none !important;
+    font-family: "Poppins", sans-serif;
+    -moz-user-select: none !important;
 }
 
 /* start: SIDEBAR */
