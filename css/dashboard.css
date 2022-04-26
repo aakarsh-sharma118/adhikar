@@ -735,12 +735,12 @@ body {
 
     #sidebar {
         left: -5rem;
-        transition: 0.8s;
+        transition: 0.5s;
     }
 
     #sidebar.active {
         left: 0;
-        transition: 0.8s;
+        transition: 0.5s;
     }
 
     #sidebar.active+.sidebar-overlay {
