@@ -565,6 +565,79 @@ header {
     }
 }
 
+.control {
+    position: absolute;
+}
+
+.control #read {
+    background-color: var(--main-color);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    position: relative;
+    z-index: 3;
+    width: 72px;
+    height: 72px;
+    cursor: pointer;
+    color: #ffffff;
+    border: 3px solid #ffffff;
+}
+
+.bounce {
+    position: absolute;
+    width: 72px;
+    height: 72px;
+    border-radius: 50%;
+    border: 2px solid #ff0000;
+    transform-origin: 50% 50%;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    animation: bounce 1s linear infinite;
+}
+
+.bounce.bt2 {
+    border-color: #55ffc3;
+    animation-delay: 0.2s;
+}
+
+.bounce.bt3 {
+    border-color: #1900ff;
+    animation-delay: 0.4s;
+}
+
+.bounce.bt4 {
+    border-color: #00ccff;
+    animation-delay: 0.6s;
+}
+
+.bounce.bt5 {
+    border-color: #4e7dff;
+    animation-delay: 0.8s;
+}
+
+.control #animation {
+    display: none;
+}
+
+@keyframes bounce {
+    0% {
+        transform: scaleX(100%) scaleY(100%);
+    }
+
+    80% {
+        transform: scaleX(180%) scaleY(25%);
+        opacity: 1;
+    }
+
+    100% {
+        transform: scaleX(200%) scaleY(100%);
+        opacity: 0.05;
+    }
+}
+
 /* Card  */
 
 .card-container {
