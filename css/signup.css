@@ -383,7 +383,7 @@ input {
   /* background-repeat: no-repeat; */
   /* background-position: center; */
   background-color: #eaeaea;
-  background-image: url("../assets/textures/5.png");
+  background-image: url("../assets/textures/5.png"), linear-gradient(-45deg, #ffffff 0%, #aaaaaa 100%);
   background-attachment: fixed;
   background-repeat: repeat;
   background-position: center;
@@ -524,7 +524,7 @@ form.sign-in-form {
   right: 48%;
   transform: translateY(-50%);
   /* background-image: linear-gradient(-45deg, #4481ebb3 0%, #4a39c5b4 100%); */
-  background-image: radial-gradient(#faffce 0%, #0d83eb 100%);
+  background-image: radial-gradient(#ffffffcd 0%, #0d83eb 100%);
   transition: 1.8s ease-in-out;
   border-radius: 50%;
   z-index: 6;
