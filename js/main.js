@@ -125,7 +125,7 @@ $(document).ready(function () {
 // Text Speech 
 
 let read = document.getElementById("read");
-let animation = document.getElementById("animation");
+// let animation = document.getElementById("animation");
 let ICON1 = document.getElementById("ICON1");
 let ICON2 = document.getElementById("ICON2");
 let icon = document.getElementsByClassName("fas")[0].classList;
@@ -146,12 +146,12 @@ if ("speechSynthesis" in window) {
     };
 
     let icon_play = function () {
-        animation.style.display = "none";
+        // animation.style.display = "none";
         ICON1.style.display = "block";
         ICON2.style.display = "none";
     }
     let icon_pause = function () {
-        animation.style.display = "block";
+        // animation.style.display = "block";
         ICON1.style.display = "none";
         ICON2.style.display = "block";
     }
