@@ -126,6 +126,8 @@ $(document).ready(function () {
 
 let read = document.getElementById("read");
 let animation = document.getElementById("animation");
+let ICON1 = document.getElementById("ICON1");
+let ICON2 = document.getElementById("ICON2");
 let icon = document.getElementsByClassName("fas")[0].classList;
 
 if ("speechSynthesis" in window) {
@@ -144,14 +146,18 @@ if ("speechSynthesis" in window) {
     };
 
     let icon_play = function () {
-        icon.add("fa-play");
-        icon.remove("fa-pause");
         animation.style.display = "none";
+        ICON1.style.display = "block";
+        ICON2.style.display = "none";
     }
     let icon_pause = function () {
-        icon.remove("fa-play");
-        icon.add("fa-pause");
         animation.style.display = "block";
+        ICON1.style.display = "none";
+        ICON2.style.display = "block";
+    }
+
+    window.onload = () => {
+        ICON2.style.display = "none";
     }
 
     read.onclick = function (event) {
