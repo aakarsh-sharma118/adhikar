@@ -1726,28 +1726,37 @@ footer.footer .move-up span:before {
         height: 180px !important;
     }
 
+    .posts {
+        margin-left: 15px;
+    }
+
 }
 
 /*        x      Viewport less then or equal to 450px       x     */
 
 
-/*              Viewport less then or equal to 350px            */
+/*              Viewport less then or equal to 370px            */
 
-@media only screen and (max-width: 350px) {
+@media only screen and (max-width: 370px) {
 
     .post-content .post-image .img {
         width: 250px !important;
         height: 150px !important;
     }
 
+
+    .posts {
+        margin-left: -10px;
+    }
+
 }
 
-/*        x      Viewport less then or equal to 350px       x     */
+/*        x      Viewport less then or equal to 370px       x     */
 
 
-/*              Viewport less then or equal to 300px            */
+/*              Viewport less then or equal to 320px            */
 
-@media only screen and (max-width: 300px) {
+@media only screen and (max-width: 320px) {
 
     main .site-title .logo {
         width: 100px;
@@ -1761,4 +1770,18 @@ footer.footer .move-up span:before {
 
 }
 
-/*        x      Viewport less then or equal to 300px       x     */
+/*        x      Viewport less then or equal to 320px       x     */
+
+
+/*              Viewport less then or equal to 280px            */
+
+@media only screen and (max-width: 280px) {
+
+
+    .posts {
+        margin-left: -30px;
+    }
+
+}
+
+/*        x      Viewport less then or equal to 280px       x     */
