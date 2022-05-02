@@ -80,7 +80,7 @@ body {
     top: 0;
     width: 5rem;
     background: #477ac6;
-    height: 70%;
+    height: auto;
     border-radius: 50px;
     top: 12%;
     z-index: 999;
@@ -95,7 +95,7 @@ body {
 }
 
 #sidebar .brand {
-    margin-top: 40%;
+    margin-top: 20%;
     display: block;
     padding: 1rem 0;
     text-align: center;
