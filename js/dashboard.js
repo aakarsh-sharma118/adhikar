@@ -126,7 +126,7 @@ document.addEventListener('click', function (e) {
 })
 
 
-// CHART: APEXCHART
+// CHART: APEXCHART - Lines
 var options = {
     series: [{
         name: 'Party-1',
@@ -167,3 +167,113 @@ var options = {
 
 var chart = new ApexCharts(document.querySelector("#chart"), options);
 chart.render();
+
+
+// CHART: APEXCHART - Bar
+var options = {
+    series: [{
+        name: 'Inflation',
+        data: [2.3, 3.1, 4.0, 10.1, 4.0, 3.6, 3.2, 2.3, 1.4, 0.8, 0.5, 0.2]
+    }],
+    chart: {
+        height: 350,
+        type: 'bar',
+    },
+    plotOptions: {
+        bar: {
+            borderRadius: 10,
+            dataLabels: {
+                position: 'top', // top, center, bottom
+            },
+        }
+    },
+    dataLabels: {
+        enabled: true,
+        formatter: function (val) {
+            return val + "%";
+        },
+        offsetY: -20,
+        style: {
+            fontSize: '12px',
+            colors: ["#304758"]
+        }
+    },
+
+    xaxis: {
+        categories: ["1 AM", "3 AM", "5 AM", "7 AM", "9 AM", "11 AM", "1 PM", "3 PM", "5 PM", "7 PM", "9 PM", "11 PM"],
+        position: 'top',
+        axisBorder: {
+            show: false
+        },
+        axisTicks: {
+            show: false
+        },
+        crosshairs: {
+            fill: {
+                type: 'gradient',
+                gradient: {
+                    colorFrom: '#D8E3F0',
+                    colorTo: '#BED1E6',
+                    stops: [0, 100],
+                    opacityFrom: 0.4,
+                    opacityTo: 0.5,
+                }
+            }
+        },
+        tooltip: {
+            enabled: true,
+        }
+    },
+    yaxis: {
+        axisBorder: {
+            show: false
+        },
+        axisTicks: {
+            show: false,
+        },
+        labels: {
+            show: false,
+            formatter: function (val) {
+                return val + "%";
+            }
+        }
+
+    },
+    title: {
+        text: 'Voting Done At Each Point, 2022',
+        floating: true,
+        offsetY: 330,
+        align: 'center',
+        style: {
+            color: '#444'
+        }
+    }
+};
+
+var chart = new ApexCharts(document.querySelector("#chart2"), options);
+chart.render();
+
+
+// CHART: APEXCHART - Pie
+// var options = {
+//     series: [44, 55, 13, 43],
+//     chart: {
+//     width: 380,
+//     type: 'pie',
+//   },
+//   labels: ['Party 1', 'Party 2', 'Party 3', 'Party 4'],
+//   responsive: [{
+//     breakpoint: 480,
+//     options: {
+//       chart: {
+//         width: 200
+//       },
+//       legend: {
+//         position: 'bottom'
+//       }
+//     }
+//   }]
+//   };
+
+//   var chart = new ApexCharts(document.querySelector("#chart3"), options);
+//   chart.render();
