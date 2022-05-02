@@ -79,28 +79,25 @@ body {
     left: 0;
     top: 0;
     width: 5rem;
-    background: #477ac6;
-    height: 70%;
-    border-radius: 50px;
-    top: 12%;
+    background: var(--dark);
+    height: 100%;
     z-index: 999;
 }
 
 .sidebar-overlay {
     position: fixed;
     inset: 0;
-    background: #00000067;
+    background: rgba(0, 0, 0, .7);
     z-index: 998;
     display: none;
 }
 
 #sidebar .brand {
-    margin-top: 40%;
     display: block;
     padding: 1rem 0;
     text-align: center;
     font-size: 2rem;
-    color: var(--dark);
+    color: var(--blue);
 }
 
 #sidebar .sidebar__menu>li>a {
@@ -112,7 +109,7 @@ body {
     border-radius: 10px;
     margin: .25rem auto;
     font-size: 1.25rem;
-    color: var(--white);
+    color: var(--dark-l-2);
     position: relative;
 }
 
@@ -134,11 +131,11 @@ body {
 #sidebar .sidebar__menu>li>a.active,
 #sidebar .sidebar__menu>li>a:hover,
 #sidebar .sidebar__menu li>a.clicked {
-    background: #22455b81;
+    background: var(--dark-l-1);
 }
 
 #sidebar .sidebar__menu li>a.active {
-    color: var(--grey);
+    color: var(--blue);
 }
 
 #sidebar .divider {
@@ -150,7 +147,6 @@ body {
 
 #sidebar .sidebar__menu>li>a.logout {
     color: var(--red);
-    font-weight: 800;
 }
 
 #sidebar .sidebar__submenu {
@@ -248,18 +244,17 @@ body {
 
 #sidebar-mobile {
     width: 100%;
-    background: var(--dark-l-2);
+    background: var(--dark);
     align-items: center;
     padding: .75rem 1.25rem;
-    /* grid-gap: 1.5rem; */
-    justify-content: space-between;
-    display: flex;
+    grid-gap: 1.5rem;
+    display: none;
 }
 
 #sidebar-mobile .toggle-sidebar {
-    color: var(--white);
+    color: var(--dark-l-2);
     cursor: pointer;
-    font-size: 2rem;
+    font-size: 1.25rem;
 }
 
 #sidebar-mobile .brand {
@@ -267,9 +262,8 @@ body {
     align-items: center;
     grid-gap: .5rem;
     color: var(--white);
-    margin-inline: auto;
     text-transform: uppercase;
-    font-size: 2rem;
+    font-size: 1.25rem;
     font-weight: 600;
     letter-spacing: 1px;
 }
@@ -293,20 +287,17 @@ body {
 /* start: MAIN TOP */
 
 #main .main__top {
-    background: var(--dark-l-2);
+    background: var(--dark-l-1);
     padding: 1.25rem;
     display: flex;
     grid-gap: 1.5rem;
-    border-bottom-left-radius: 50px;
-    border-bottom-right-radius: 50px;
-    padding-bottom: 12%;
     align-items: center;
     justify-content: space-between;
     flex-wrap: wrap-reverse;
 }
 
 #main .main__top .main__top__title h3 {
-    font-size: 1.5rem;
+    font-size: 1.25rem;
     font-weight: 600;
     color: var(--white);
     margin-bottom: .5rem;
@@ -333,9 +324,7 @@ body {
 
 #main .main__top .main__top__title .breadcrumbs li a.active {
     pointer-events: none;
-    font-weight: 500;
-    font-size: 1rem;
-    color: #d0e3ff;
+    color: var(--grey);
 }
 
 #main .main__top .main__top__menu {
@@ -357,7 +346,7 @@ body {
 
 #main .main__top .main__top__menu>li>a {
     font-size: 1.25rem;
-    color: var(--white);
+    color: var(--dark-l-2);
 }
 
 #main .main__top .main__top__menu>li>a:hover {
@@ -370,7 +359,7 @@ body {
     right: 0;
     width: 300px;
     background: var(--white);
-    box-shadow: 4px 4px 16px #0000001a;
+    box-shadow: 4px 4px 16px rgba(0, 0, 0, .1);
     padding: 1.25rem;
     border-radius: 5px;
     opacity: 0;
@@ -555,8 +544,7 @@ body {
 
 #main .main__body {
     padding: 1.25rem;
-    margin-top: -11.9%;
-    /* box-shadow: inset 0 8rem 0 var(--dark-l-1); */
+    box-shadow: inset 0 8rem 0 var(--dark-l-1);
 }
 
 #main .main__body .main__body__box-info {
@@ -739,45 +727,43 @@ body {
 
 /* start: BREAKPOINTS */
 
-/* @media screen and (max-width: 576px) { */
+@media screen and (max-width: 576px) {
+    #sidebar-mobile {
+        display: flex;
+        transition: 0.8s;
+    }
 
-#sidebar-mobile {
-    display: flex;
-    transition: 0.8s;
+    #sidebar {
+        left: -5rem;
+        transition: 0.5s;
+    }
+
+    #sidebar.active {
+        left: 0;
+        transition: 0.5s;
+    }
+
+    #sidebar.active+.sidebar-overlay {
+        display: block;
+    }
+
+    #main {
+        position: relative;
+        left: 0;
+        width: 100%;
+    }
+
+    #main .main__top .main__top__menu .main__dropdown {
+        position: fixed;
+        top: 7.5rem;
+        right: 1.25rem;
+        left: 1.25rem;
+        width: unset;
+    }
+
+    #main .main__body__data>div {
+        flex: 1 0 0;
+    }
 }
-
-#sidebar {
-    left: -5rem;
-    transition: 0.5s;
-}
-
-#sidebar.active {
-    left: 1rem;
-    transition: 0.5s;
-}
-
-#sidebar.active+.sidebar-overlay {
-    display: block;
-}
-
-#main {
-    position: relative;
-    left: 0;
-    width: 100%;
-}
-
-#main .main__top .main__top__menu .main__dropdown {
-    position: fixed;
-    top: 7.5rem;
-    right: 1.25rem;
-    left: 1.25rem;
-    width: unset;
-}
-
-#main .main__body__data>div {
-    flex: 1 0 0;
-}
-
-/* } */
 
 /* end: BREAKPOINTS */
