@@ -404,5 +404,19 @@
 
 	<script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
 	<script src="./js/dashboard.js"></script>
+
+    <!-- Disable Right click Javascript file -->
+    <script>
+        $(document).ready(function () {
+            $('body').bind('cut copy paste', function (e) {
+                e.preventDefault();
+            })
+            $('body').on("contextmenu", function (e) {
+                return false
+            })
+        })
+
+    </script>
+
 </body>
 </html>
