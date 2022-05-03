@@ -766,13 +766,13 @@ body {
     width: 100%;
 }
 
-#main .main__top .main__top__menu .main__dropdown {
+/* #main .main__top .main__top__menu .main__dropdown {
     position: fixed;
     top: 7.5rem;
     right: 1.25rem;
     left: 1.25rem;
     width: unset;
-}
+} */
 
 #main .main__body__data>div {
     flex: 1 0 0;
