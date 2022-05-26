@@ -50,6 +50,60 @@ $(document).ready(function () {
 
 });
 
+// Text Speech 
+
+let read = document.getElementById("read");
+// let animation = document.getElementById("animation");
+let ICON1 = document.getElementById("ICON1");
+let ICON2 = document.getElementById("ICON2");
+let icon = document.getElementsByClassName("fas")[0].classList;
+
+if ("speechSynthesis" in window) {
+    let message = new SpeechSynthesisUtterance();
+    let text = document.getElementById("text").textContent;
+    message.text = text.replace(/(\r\n|\r|\n)/gm, " "); //remove line breaks
+
+    //when reading ended
+    message.onend = function (event) {
+        icon_play();
+    };
+
+    //when reading started
+    message.onstart = function (event) {
+        icon_pause();
+    };
+
+    let icon_play = function () {
+        // animation.style.display = "none";
+        ICON1.style.display = "block";
+        ICON2.style.display = "none";
+    }
+    let icon_pause = function () {
+        // animation.style.display = "block";
+        ICON1.style.display = "none";
+        ICON2.style.display = "block";
+    }
+
+    window.onload = () => {
+        ICON2.style.display = "none";
+    }
+
+    read.onclick = function (event) {
+        if (speechSynthesis.speaking && !speechSynthesis.paused) {
+            icon_play();
+            speechSynthesis.pause();
+        } else if (speechSynthesis.paused) {
+            icon_pause();
+            speechSynthesis.resume();
+        } else {
+            speechSynthesis.speak(message);
+        }
+    }
+} else {
+
+    alert("Sorry,Your browser does not support speech Synthesis API");
+}
+
 // Navbar
 
 const navBar = document.querySelector(".navbar");
@@ -121,57 +175,3 @@ $(document).ready(function () {
     $(".goTop").click(function () { scroll(0, 0) });
 });
 
-
-// Text Speech 
-
-let read = document.getElementById("read");
-// let animation = document.getElementById("animation");
-let ICON1 = document.getElementById("ICON1");
-let ICON2 = document.getElementById("ICON2");
-let icon = document.getElementsByClassName("fas")[0].classList;
-
-if ("speechSynthesis" in window) {
-    let message = new SpeechSynthesisUtterance();
-    let text = document.getElementById("text").textContent;
-    message.text = text.replace(/(\r\n|\r|\n)/gm, " "); //remove line breaks
-
-    //when reading ended
-    message.onend = function (event) {
-        icon_play();
-    };
-
-    //when reading started
-    message.onstart = function (event) {
-        icon_pause();
-    };
-
-    let icon_play = function () {
-        // animation.style.display = "none";
-        ICON1.style.display = "block";
-        ICON2.style.display = "none";
-    }
-    let icon_pause = function () {
-        // animation.style.display = "block";
-        ICON1.style.display = "none";
-        ICON2.style.display = "block";
-    }
-
-    window.onload = () => {
-        ICON2.style.display = "none";
-    }
-
-    read.onclick = function (event) {
-        if (speechSynthesis.speaking && !speechSynthesis.paused) {
-            icon_play();
-            speechSynthesis.pause();
-        } else if (speechSynthesis.paused) {
-            icon_pause();
-            speechSynthesis.resume();
-        } else {
-            speechSynthesis.speak(message);
-        }
-    }
-} else {
-
-    alert("Sorry,Your browser does not support speech Synthesis API");
-}
